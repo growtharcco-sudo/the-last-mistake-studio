@@ -83,10 +83,10 @@ def main():
         if DRY: continue
         try:
             wait_public(video_url)
+            local = os.path.join(d, "video.mp4")
+            urllib.request.urlretrieve(video_url, local)          # kept for YouTube and the Instagram direct-upload fallback
             if "yt_video_id" not in res:
                 import youtube
-                local = os.path.join(d, "video.mp4")
-                urllib.request.urlretrieve(video_url, local)
                 res.update(youtube.upload_short(local, post["youtube_title"], post["youtube_description"],
                                                 post.get("youtube_tags")))
                 try:   # thumbnail = the cover; never blocks the post
@@ -96,12 +96,12 @@ def main():
                 except Exception as e:
                     res["yt_thumbnail"] = f"failed ({type(e).__name__})"
                 print(vid, "YouTube thumbnail:", res.get("yt_thumbnail"))
-                os.remove(local)
                 json.dump(res, open(rp, "w"), indent=1); print("  YouTube:", res["yt_url"], res.get("yt_privacy"))
             if "ig_media_id" not in res:
                 import instagram
-                res.update(instagram.publish_reel(video_url, post["instagram_caption"], cover_url))
+                res.update(instagram.publish_reel(video_url, post["instagram_caption"], cover_url, local_path=local))
                 json.dump(res, open(rp, "w"), indent=1); print("  Instagram:", res.get("ig_permalink"))
+            if os.path.exists(local): os.remove(local)
             res["posted_at"] = now.isoformat(); json.dump(res, open(rp, "w"), indent=1)
             os.makedirs(os.path.join(ROOT, "posted"), exist_ok=True)
             shutil.move(d, os.path.join(ROOT, "posted", vid)); changed = True

@@ -14,25 +14,16 @@ from instagram import _env
 PAGES = os.environ["PAGES_BASE"].rstrip("/"); url = f"{PAGES}/_test/video.mp4"; cover = f"{PAGES}/_test/cover.png"; ok = True
 r = requests.head(url, timeout=30); print("Hosting:", "OK" if r.ok else "FAILED", r.status_code, url); ok &= r.ok
 
-tok, uid = _env("IG_TOKEN"), _env("IG_USER_ID"); B = instagram._base(tok)
-c = requests.post(f"{B}/{uid}/media", data={"media_type": "REELS", "video_url": url, "caption": "test", "share_to_feed": "false",
-                  "is_ai_generated": "true", "access_token": tok}, timeout=60)
-if not c.ok and "is_ai_generated" in c.text:
-    c = requests.post(f"{B}/{uid}/media", data={"media_type": "REELS", "video_url": url, "caption": "test", "share_to_feed": "false", "access_token": tok}, timeout=60)
-if not c.ok: print("Instagram: FAILED to create container", c.status_code, c.text[:400]); ok = False
-else:
-    cid = c.json()["id"]; st = {}
-    for _ in range(40):
-        st = requests.get(f"{B}/{cid}", params={"fields": "status_code,status", "access_token": tok}, timeout=30).json()
-        if st.get("status_code") in ("FINISHED", "ERROR", "EXPIRED"): break
-        time.sleep(10)
-    print("Instagram: processed the test Reel ->", st.get("status_code"), "(NOT published)" if st.get("status_code") == "FINISHED" else st)
-    ok &= st.get("status_code") == "FINISHED"
+local = "/tmp/t.mp4"; open(local, "wb").write(requests.get(url, timeout=120).content)
+try:
+    cid, how = instagram.make_container(url, "test", None, local_path=local, share=False)
+    print(f"Instagram: processed the test Reel via {how} (NOT published, container expires in 24 h)")
+except Exception as e:
+    print("Instagram: FAILED", e); ok = False
 
 if os.environ.get("SKIP_YT") == "1":
     print("YouTube: skipped this run")
 else:
-    local = "/tmp/t.mp4"; open(local, "wb").write(requests.get(url, timeout=120).content)
     vid = None
     try:
         res = youtube.upload_short(local, "Pipeline test (deleted automatically)", "Automated test upload.", privacy="unlisted")
