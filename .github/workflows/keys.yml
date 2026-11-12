@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["tools/check_keys.py", ".github/workflows/check.yml", "checks/**"]
+    paths: ["tools/check_keys.py", ".github/workflows/keys.yml", "checks/**"]
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -12,10 +12,16 @@ jobs:
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q requests google-api-python-client google-auth
-      - env:
+      - name: Check keys
+        env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
-        run: python tools/check_keys.py
+        run: |
+          set -o pipefail
+          python tools/check_keys.py 2>&1 | tee out.txt; rc=$?
+          # names and IDs only (never key values): also shown as notes on the run page
+          while IFS= read -r l; do [ -n "$l" ] && echo "::notice::$l"; done < out.txt
+          exit $rc
