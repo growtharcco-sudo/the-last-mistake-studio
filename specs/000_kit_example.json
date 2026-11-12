@@ -1,0 +1,638 @@
+{
+ "id": "000_kit_example",
+ "style": "board",
+ "series": "The Last Mistake",
+ "voice": "am_michael",
+ "speed": 0.95,
+ "header": {
+  "left": "CASE FILE 001",
+  "right": "THE LAST MISTAKE"
+ },
+ "phrases": [
+  {
+   "say": "He ran a billion dollar black market.",
+   "cap": "He ran a billion dollar black market.",
+   "pause": 0.22
+  },
+  {
+   "say": "The FBI couldn't find him.",
+   "cap": "The FBI couldn't find him.",
+   "pause": 0.22
+  },
+  {
+   "say": "Then a tax agent found him... in one weekend. Using Google.",
+   "cap": "Then a tax agent found him. In one weekend. Using Google.",
+   "pause": 0.4
+  },
+  {
+   "say": "Twenty thirteen. Silk Road. The dark web's biggest drug market.",
+   "cap": "2013. Silk Road. The dark web's biggest drug market.",
+   "pause": 0.22
+  },
+  {
+   "say": "Its boss is a ghost called Dread Pirate Roberts.",
+   "cap": "Its boss is a ghost called Dread Pirate Roberts.",
+   "pause": 0.4
+  },
+  {
+   "say": "Hidden behind Tor. Paid in Bitcoin. No name. No face.",
+   "cap": "Hidden behind Tor. Paid in Bitcoin. No name. No face.",
+   "pause": 0.4
+  },
+  {
+   "say": "I R S agent Gary Alford tries something nobody bothered with.",
+   "cap": "IRS agent Gary Alford tries something nobody bothered with.",
+   "pause": 0.22
+  },
+  {
+   "say": "He searches for the oldest mention of Silk Road on the internet.",
+   "cap": "He searches for the oldest mention of Silk Road on the internet.",
+   "pause": 0.4
+  },
+  {
+   "say": "He finds a user called altoid,",
+   "cap": "He finds a user called \"altoid\"",
+   "pause": 0.22
+  },
+  {
+   "say": "posting about the site before almost anyone knew it existed.",
+   "cap": "posting about the site before almost anyone knew it existed.",
+   "pause": 0.4
+  },
+  {
+   "say": "Alford reads everything altoid ever wrote.",
+   "cap": "Alford reads everything altoid ever wrote.",
+   "pause": 0.22
+  },
+  {
+   "say": "And in one old post, altoid left an email address.",
+   "cap": "And in one old post, altoid left an email address.",
+   "pause": 0.22
+  },
+  {
+   "say": "Ross Ulbrikt, at gmail dot com.",
+   "cap": "rossulbricht at gmail dot com",
+   "pause": 0.4
+  },
+  {
+   "say": "His real name.",
+   "cap": "His real name.",
+   "pause": 0.4
+  },
+  {
+   "say": "October first, twenty thirteen. A library in San Francisco.",
+   "cap": "October 1, 2013. A library in San Francisco.",
+   "pause": 0.22
+  },
+  {
+   "say": "Two agents start a fake lovers' fight. Ross turns to look.",
+   "cap": "Two agents start a fake lovers' fight. Ross turns to look.",
+   "pause": 0.4
+  },
+  {
+   "say": "They grab his laptop... still logged in.",
+   "cap": "They grab his laptop. Still logged in.",
+   "pause": 0.4
+  },
+  {
+   "say": "Sentenced to life.",
+   "cap": "Sentenced to life.",
+   "pause": 0.22
+  },
+  {
+   "say": "Pardoned in twenty twenty five.",
+   "cap": "Pardoned in 2025.",
+   "pause": 0.4
+  },
+  {
+   "say": "The perfect hidden empire. Undone by one email he typed two years earlier.",
+   "cap": "The perfect hidden empire. Undone by one email he typed two years earlier.",
+   "pause": 0.22
+  },
+  {
+   "say": "Follow. Every case has a last mistake.",
+   "cap": "Follow. Every case has a last mistake.",
+   "pause": 0.4
+  }
+ ],
+ "scenes": [
+  {
+   "until": 3,
+   "kind": "suspect",
+   "cam": [
+    930,
+    1208.0,
+    0.9
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "tape",
+     "text": "WHO IS DREAD PIRATE ROBERTS?",
+     "x": 1350.0,
+     "y": 300,
+     "w": 1800,
+     "rot": 1.5,
+     "at": -1,
+     "pin": false
+    },
+    {
+     "type": "polaroid",
+     "illo": "hooded",
+     "w": 660,
+     "label": "SUSPECT: D.P.R.",
+     "x": 930,
+     "y": 1080,
+     "rot": 2,
+     "at": -1,
+     "pin": [
+      1221.0,
+      704.0
+     ]
+    },
+    {
+     "type": "stamp",
+     "text": "$1 BILLION",
+     "sub": "BLACK MARKET",
+     "color": "ink",
+     "size": 110,
+     "rot": -7,
+     "seed": 11,
+     "x": 1160,
+     "y": 760,
+     "at": 0,
+     "delay": 0.7
+    },
+    {
+     "type": "stamp",
+     "text": "FBI: NO SUSPECT",
+     "sub": null,
+     "color": "red",
+     "size": 92,
+     "rot": 6,
+     "seed": 4,
+     "x": 930,
+     "y": 1440,
+     "at": 1,
+     "delay": 0.3
+    },
+    {
+     "type": "stamp",
+     "text": "CAUGHT BY GOOGLE",
+     "sub": null,
+     "color": "red",
+     "size": 112,
+     "rot": -9,
+     "seed": 5,
+     "x": 930,
+     "y": 1080,
+     "at": 2,
+     "delay": 2.2
+    }
+   ],
+   "cam_end": [
+    930,
+    1195.2,
+    1.0
+   ]
+  },
+  {
+   "until": 5,
+   "kind": "card",
+   "cam": [
+    1770,
+    2115.2,
+    1.0
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "card",
+     "title": "SILK ROAD",
+     "lines": [
+      "dark web drug market",
+      "2011 to 2013",
+      "run by: Dread Pirate",
+      "Roberts"
+     ],
+     "line_font": "hand",
+     "red": [],
+     "w": 760,
+     "x": 1770,
+     "y": 2000,
+     "rot": -2,
+     "at": 3,
+     "pin": [
+      1473.0,
+      1843.0
+     ]
+    },
+    {
+     "type": "string",
+     "a": [
+      1221.0,
+      704.0
+     ],
+     "b": [
+      1473.0,
+      1843.0
+     ],
+     "at": 4,
+     "delay": 0.3,
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "until": 6,
+   "kind": "note",
+   "cam": [
+    870,
+    2161.3,
+    0.95
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "sticky",
+     "lines": [
+      "TOR +",
+      "BITCOIN =",
+      "NO NAME"
+     ],
+     "w": 440,
+     "x": 870,
+     "y": 2080,
+     "rot": 4,
+     "at": 5,
+     "delay": 0.2,
+     "pin": [
+      870,
+      1923.0
+     ]
+    }
+   ]
+  },
+  {
+   "until": 8,
+   "kind": "card",
+   "cam": [
+    930,
+    2795.2,
+    1.0
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "card",
+     "title": "SEARCH LOG  |  IRS",
+     "lines": [
+      "agent: Gary Alford",
+      "query: \"silk road\"",
+      "sort: OLDEST first",
+      "result: JAN 2011"
+     ],
+     "line_font": "hand",
+     "red": [
+      3
+     ],
+     "w": 760,
+     "x": 930,
+     "y": 2680,
+     "rot": 2,
+     "at": 6,
+     "pin": [
+      1227.0,
+      2523.0
+     ]
+    },
+    {
+     "type": "string",
+     "a": [
+      1473.0,
+      1843.0
+     ],
+     "b": [
+      1227.0,
+      2523.0
+     ],
+     "at": 6,
+     "delay": 1.4,
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "until": 10,
+   "kind": "card",
+   "cam": [
+    1770,
+    2795.2,
+    1.0
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "card",
+     "title": "POST  |  JAN 2011",
+     "lines": [
+      "user: altoid",
+      "\"Has anyone seen",
+      "Silk Road yet?\""
+     ],
+     "line_font": "type",
+     "red": [],
+     "w": 760,
+     "x": 1770,
+     "y": 2680,
+     "rot": -2,
+     "at": 8,
+     "pin": [
+      1474.0,
+      2560.0
+     ]
+    },
+    {
+     "type": "string",
+     "a": [
+      1227.0,
+      2523.0
+     ],
+     "b": [
+      1474.0,
+      2560.0
+     ],
+     "at": 8,
+     "delay": 0.6,
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "until": 13,
+   "kind": "card",
+   "cam": [
+    930,
+    3475.2,
+    1.0
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "card",
+     "title": "POST  |  OCT 2011",
+     "lines": [
+      "user: altoid",
+      "hiring an IT pro",
+      "contact:",
+      "rossulbricht at",
+      "gmail dot com"
+     ],
+     "line_font": "type",
+     "red": [
+      3,
+      4
+     ],
+     "w": 760,
+     "x": 930,
+     "y": 3360,
+     "rot": 0,
+     "at": 10,
+     "hidden": [
+      3,
+      4
+     ],
+     "reveal_at": 12,
+     "pin": [
+      1218.0,
+      3181.0
+     ]
+    },
+    {
+     "type": "string",
+     "a": [
+      1474.0,
+      2560.0
+     ],
+     "b": [
+      1218.0,
+      3181.0
+     ],
+     "at": 11,
+     "delay": 0.3,
+     "dur": 0.6
+    }
+   ]
+  },
+  {
+   "until": 14,
+   "kind": "name",
+   "cam": [
+    930,
+    1378.0,
+    0.9
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "tag",
+     "text": "ROSS ULBRICHT",
+     "x": 930,
+     "y": 1650,
+     "rot": -4,
+     "at": 13,
+     "delay": 0.55,
+     "pin": false
+    }
+   ]
+  },
+  {
+   "until": 16,
+   "kind": "note",
+   "cam": [
+    1390.0,
+    3968.0,
+    0.9
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "sticky",
+     "lines": [
+      "OCT 1 2013",
+      "SF LIBRARY",
+      "FAKE FIGHT"
+     ],
+     "w": 540,
+     "x": 1390.0,
+     "y": 3990,
+     "rot": -3,
+     "at": 14,
+     "delay": 0.4,
+     "pin": [
+      1390.0,
+      3835.0
+     ]
+    }
+   ]
+  },
+  {
+   "until": 17,
+   "kind": "photo",
+   "cam": [
+    1770,
+    3475.2,
+    1.0
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "polaroid",
+     "illo": "laptop",
+     "w": 600,
+     "label": "EXHIBIT C: LAPTOP",
+     "x": 1770,
+     "y": 3360,
+     "rot": -4,
+     "at": 16,
+     "pin": [
+      1502.0,
+      3098.0
+     ]
+    },
+    {
+     "type": "string",
+     "a": [
+      1218.0,
+      3181.0
+     ],
+     "b": [
+      1502.0,
+      3098.0
+     ],
+     "at": 16,
+     "delay": 0.7,
+     "dur": 0.6
+    },
+    {
+     "type": "stamp",
+     "text": "SEIZED",
+     "sub": "STILL LOGGED IN",
+     "color": "red",
+     "size": 130,
+     "rot": -9,
+     "seed": 15,
+     "x": 1810,
+     "y": 3330,
+     "at": 16,
+     "delay": 1.3
+    }
+   ]
+  },
+  {
+   "until": 19,
+   "kind": "verdict",
+   "cam": [
+    1350.0,
+    1324.5,
+    0.66
+   ],
+   "move": 0.55,
+   "els": [
+    {
+     "type": "stamp",
+     "text": "LIFE SENTENCE",
+     "sub": "2015",
+     "color": "ink",
+     "size": 116,
+     "rot": -6,
+     "seed": 16,
+     "x": 1770,
+     "y": 900,
+     "at": 17,
+     "delay": 0.15
+    },
+    {
+     "type": "stamp",
+     "text": "PARDONED",
+     "sub": "2025",
+     "color": "red",
+     "size": 132,
+     "rot": 8,
+     "seed": 17,
+     "x": 1790,
+     "y": 1260,
+     "at": 18,
+     "delay": 0.25
+    }
+   ],
+   "cam_end": [
+    1350.0,
+    1314.6,
+    0.7
+   ]
+  },
+  {
+   "until": "end",
+   "kind": "finale",
+   "cam": [
+    1350.0,
+    2480.0,
+    0.3870967741935484
+   ],
+   "move": 1.0,
+   "els": [
+    {
+     "type": "circle",
+     "box": [
+      548.0,
+      3387.0,
+      1280.0,
+      3595.0
+     ],
+     "at": 19,
+     "delay": 0.6,
+     "dur": 0.7,
+     "width": 14,
+     "seed": 3
+    },
+    {
+     "type": "logo",
+     "title": "THE LAST MISTAKE",
+     "follow": "FOLLOW FOR CASE 002",
+     "at": 20,
+     "delay": -0.25,
+     "veil": true,
+     "y": 820
+    }
+   ]
+  }
+ ],
+ "world": [
+  2700,
+  4960
+ ],
+ "cover": {
+  "kicker": "CASE 001: SILK ROAD",
+  "big": [
+   "CAUGHT BY",
+   "ONE EMAIL"
+  ],
+  "sub": "THE LAST MISTAKE"
+ },
+ "sources": [
+  {
+   "fact": "Silk Road, Dread Pirate Roberts, the altoid posts, Gary Alford (IRS), arrest at Glen Park library on 1 Oct 2013, life sentence 2015, pardon Jan 2025",
+   "url": "https://en.wikipedia.org/wiki/Ross_Ulbricht"
+  },
+  {
+   "fact": "Silk Road marketplace, about $1.2 billion in sales per the criminal complaint",
+   "url": "https://en.wikipedia.org/wiki/Silk_Road_(marketplace)"
+  }
+ ],
+ "post": {
+  "instagram_caption": "He ran a billion dollar black market and the FBI couldn't find him.\n\nAn IRS agent searched for the oldest mention of Silk Road online and found one old forum post with a real Gmail address in it.\n\nWould you have spotted it?\n\nFollow @thelastmistakefiles. Every case has a last mistake.\n\n#thelastmistake #truecrime #darkweb #silkroad #casefiles",
+  "youtube_title": "The Email That Ended a Billion Dollar Empire",
+  "youtube_description": "Ross Ulbricht ran Silk Road as Dread Pirate Roberts. An IRS agent found him with one Google search and an old forum post.\n\nAI narration. Sources:\nhttps://en.wikipedia.org/wiki/Ross_Ulbricht\nhttps://en.wikipedia.org/wiki/Silk_Road_(marketplace)\n\nSubscribe to @thelastmistakefiles. Every case has a last mistake.\n\n#truecrime #casefiles #thelastmistake"
+ }
+}

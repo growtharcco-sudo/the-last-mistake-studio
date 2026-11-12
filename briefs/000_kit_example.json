@@ -1,0 +1,66 @@
+{
+ "id": "000_kit_example",
+ "case": "001",
+ "style": "board",
+ "series": "The Last Mistake",
+ "speed": 0.95,
+ "beats": [
+  {"say": "He ran a billion dollar black market.",
+   "show": {"kind": "suspect", "title": "WHO IS DREAD PIRATE ROBERTS?", "label": "SUSPECT: D.P.R.",
+            "stamps": [{"text": "$1 BILLION", "sub": "BLACK MARKET", "color": "ink", "at": 0, "delay": 0.7},
+                       {"text": "FBI: NO SUSPECT", "at": 1, "delay": 0.3},
+                       {"text": "CAUGHT BY GOOGLE", "at": 2, "delay": 2.2}]}},
+  {"say": "The FBI couldn't find him."},
+  {"say": "Then a tax agent found him... in one weekend. Using Google.", "cap": "Then a tax agent found him. In one weekend. Using Google."},
+
+  {"say": "Twenty thirteen. Silk Road. The dark web's biggest drug market.", "cap": "2013. Silk Road. The dark web's biggest drug market.",
+   "show": {"kind": "card", "title": "SILK ROAD", "lines": ["dark web drug market", "2011 to 2013", "run by: Dread Pirate", "Roberts"], "link_at": 1, "link_delay": 0.3}},
+  {"say": "Its boss is a ghost called Dread Pirate Roberts."},
+  {"say": "Hidden behind Tor. Paid in Bitcoin. No name. No face.",
+   "show": {"kind": "note", "lines": ["TOR +", "BITCOIN =", "NO NAME"]}},
+
+  {"say": "I R S agent Gary Alford tries something nobody bothered with.", "cap": "IRS agent Gary Alford tries something nobody bothered with.",
+   "show": {"kind": "card", "title": "SEARCH LOG  |  IRS", "lines": ["agent: Gary Alford", "query: \"silk road\"", "sort: OLDEST first", "result: JAN 2011"], "red": [3], "link_delay": 1.4}},
+  {"say": "He searches for the oldest mention of Silk Road on the internet."},
+
+  {"say": "He finds a user called altoid,", "cap": "He finds a user called \"altoid\"",
+   "show": {"kind": "card", "title": "POST  |  JAN 2011", "font": "type", "lines": ["user: altoid", "\"Has anyone seen", "Silk Road yet?\""], "link_delay": 0.6}},
+  {"say": "posting about the site before almost anyone knew it existed."},
+
+  {"say": "Alford reads everything altoid ever wrote.",
+   "show": {"kind": "card", "title": "POST  |  OCT 2011", "font": "type", "lines": ["user: altoid", "hiring an IT pro", "contact:", "rossulbricht at", "gmail dot com"],
+            "hidden": [3, 4], "reveal": 2, "link_at": 1, "link_delay": 0.3}},
+  {"say": "And in one old post, altoid left an email address."},
+  {"say": "Ross Ulbrikt, at gmail dot com.", "cap": "rossulbricht at gmail dot com"},
+  {"say": "His real name.",
+   "show": {"kind": "name", "text": "ROSS ULBRICHT"}},
+
+  {"say": "October first, twenty thirteen. A library in San Francisco.", "cap": "October 1, 2013. A library in San Francisco.",
+   "show": {"kind": "note", "lines": ["OCT 1 2013", "SF LIBRARY", "FAKE FIGHT"], "delay": 0.4}},
+  {"say": "Two agents start a fake lovers' fight. Ross turns to look."},
+  {"say": "They grab his laptop... still logged in.", "cap": "They grab his laptop. Still logged in.",
+   "show": {"kind": "photo", "illo": "laptop", "label": "EXHIBIT C: LAPTOP", "link_delay": 0.7,
+            "stamp": {"text": "SEIZED", "sub": "STILL LOGGED IN", "at": 0, "delay": 1.3}}},
+
+  {"say": "Sentenced to life.",
+   "show": {"kind": "verdict", "stamps": [{"text": "LIFE SENTENCE", "sub": "2015", "color": "ink", "at": 0, "delay": 0.15},
+                                          {"text": "PARDONED", "sub": "2025", "at": 1, "delay": 0.25}]}},
+  {"say": "Pardoned in twenty twenty five.", "cap": "Pardoned in 2025."},
+
+  {"say": "The perfect hidden empire. Undone by one email he typed two years earlier.",
+   "show": {"kind": "finale", "follow": "FOLLOW FOR CASE 002"}},
+  {"say": "Follow. Every case has a last mistake."}
+ ],
+ "cover": {"kicker": "CASE 001: SILK ROAD", "big": ["CAUGHT BY", "ONE EMAIL"], "sub": "THE LAST MISTAKE"},
+ "sources": [
+  {"fact": "Silk Road, Dread Pirate Roberts, the altoid posts, Gary Alford (IRS), arrest at Glen Park library on 1 Oct 2013, life sentence 2015, pardon Jan 2025",
+   "url": "https://en.wikipedia.org/wiki/Ross_Ulbricht"},
+  {"fact": "Silk Road marketplace, about $1.2 billion in sales per the criminal complaint",
+   "url": "https://en.wikipedia.org/wiki/Silk_Road_(marketplace)"}
+ ],
+ "post": {
+  "instagram_caption": "He ran a billion dollar black market and the FBI couldn't find him.\n\nAn IRS agent searched for the oldest mention of Silk Road online and found one old forum post with a real Gmail address in it.\n\nWould you have spotted it?\n\nFollow @thelastmistakefiles. Every case has a last mistake.\n\n#thelastmistake #truecrime #darkweb #silkroad #casefiles",
+  "youtube_title": "The Email That Ended a Billion Dollar Empire",
+  "youtube_description": "Ross Ulbricht ran Silk Road as Dread Pirate Roberts. An IRS agent found him with one Google search and an old forum post.\n\nAI narration. Sources:\nhttps://en.wikipedia.org/wiki/Ross_Ulbricht\nhttps://en.wikipedia.org/wiki/Silk_Road_(marketplace)\n\nSubscribe to @thelastmistakefiles. Every case has a last mistake.\n\n#truecrime #casefiles #thelastmistake"
+ }
+}

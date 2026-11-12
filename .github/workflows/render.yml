@@ -1,0 +1,31 @@
+name: Render a Reel
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "Spec path, e.g. specs/002_slug.json"
+        required: true
+      sheet_only:
+        description: "Only make the check sheet"
+        type: boolean
+        default: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update -q && sudo apt-get install -y -q ffmpeg
+      - uses: actions/cache@v4
+        with: { path: ~/.cache/kokoro, key: kokoro-v1.0 }
+      - run: pip install -r requirements.txt
+      - name: Render
+        run: |
+          if [ "${{ inputs.sheet_only }}" = "true" ]; then python pipeline/make_reel.py "${{ inputs.spec }}" --sheet
+          else python pipeline/make_reel.py "${{ inputs.spec }}"; fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reel
+          path: queue/

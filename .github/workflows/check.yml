@@ -1,0 +1,16 @@
+name: Check briefs
+on:
+  push:
+    paths: ["briefs/**", "pipeline/**"]
+  pull_request:
+jobs:
+  layout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install numpy pillow
+      - name: Build every brief and run the layout check
+        run: |
+          for b in briefs/*.json; do echo "== $b"; python pipeline/kit.py "$b" || exit 1; done

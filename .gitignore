@@ -1,5 +1,4 @@
-queue/*/voice.wav
-queue/*/*.mp4
-queue/*/check.*
+queue/*
+!queue/.gitkeep
 __pycache__/
 *.pyc
