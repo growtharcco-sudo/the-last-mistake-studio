@@ -1,5 +1,8 @@
 name: Deep check (no public posts)
 on:
+  push:
+    branches: [main]
+    paths: ["checks/deep.txt"]
   workflow_dispatch:
     inputs:
       skip_youtube: { description: "Skip the YouTube test upload", default: "0" }
@@ -19,4 +22,8 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
           SKIP_YT: ${{ inputs.skip_youtube }}
-        run: python tools/deep_check.py
+        run: |
+          rc=0; python tools/deep_check.py > out.txt 2>&1 || rc=$?
+          cat out.txt
+          while IFS= read -r l; do [ -n "$l" ] && echo "::notice::$l"; done < out.txt
+          exit $rc
