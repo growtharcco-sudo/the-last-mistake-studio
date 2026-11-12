@@ -1,0 +1,5 @@
+queue/*/voice.wav
+queue/*/*.mp4
+queue/*/check.*
+__pycache__/
+*.pyc
