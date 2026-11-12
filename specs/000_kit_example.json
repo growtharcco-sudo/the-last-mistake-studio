@@ -622,17 +622,43 @@
  },
  "sources": [
   {
-   "fact": "Silk Road, Dread Pirate Roberts, the altoid posts, Gary Alford (IRS), arrest at Glen Park library on 1 Oct 2013, life sentence 2015, pardon Jan 2025",
-   "url": "https://en.wikipedia.org/wiki/Ross_Ulbricht"
+   "fact": "Gary Alford (IRS) traced Dread Pirate Roberts to Ulbricht through the altoid username; arrest at Glen Park library, SF, 1 Oct 2013; agents faked a lovers' quarrel; life sentence 29 May 2015; pardon 21 Jan 2025",
+   "url": "https://en.wikipedia.org/wiki/Ross_Ulbricht",
+   "fetched": "2026-11-13"
   },
   {
-   "fact": "Silk Road marketplace, about $1.2 billion in sales per the criminal complaint",
-   "url": "https://en.wikipedia.org/wiki/Silk_Road_(marketplace)"
+   "fact": "Silk Road sales of roughly $1.2 billion (FBI criminal complaint); launched February 2011",
+   "url": "https://en.wikipedia.org/wiki/Silk_Road_(marketplace)",
+   "fetched": "2026-11-13"
+  },
+  {
+   "fact": "The altoid job post: 'send your answers to rossulbricht at gmail dot com'",
+   "url": "https://bitcointalk.org/index.php?topic=47811.0",
+   "fetched": "2026-11-13"
   }
  ],
  "post": {
-  "instagram_caption": "He ran a billion dollar black market and the FBI couldn't find him.\n\nAn IRS agent searched for the oldest mention of Silk Road online and found one old forum post with a real Gmail address in it.\n\nWould you have spotted it?\n\nFollow @thelastmistakefiles. Every case has a last mistake.\n\n#thelastmistake #truecrime #darkweb #silkroad #casefiles",
+  "post_at": "2026-11-14T23:30:00+05:30",
+  "slot": "evening",
+  "instagram_caption": "He ran a billion dollar black market, and the FBI couldn't find him.\n\nRoss Ulbricht ran Silk Road as \"Dread Pirate Roberts\", hidden behind Tor and paid in Bitcoin. IRS agent Gary Alford searched for the oldest mention of the site online and found a user called altoid. In one old forum post, altoid had left his real Gmail address.\n\nHe was arrested at a San Francisco library in October 2013, sentenced to life in 2015 and pardoned in January 2025.\n\nThe last mistake: one email he typed two years earlier.\n\nSources: court records via Wikipedia, the original Bitcointalk post.\n\nWould you have spotted the email?\n\n#thelastmistake #truecrime #darkweb #silkroad #casefiles",
   "youtube_title": "The Email That Ended a Billion Dollar Empire",
-  "youtube_description": "Ross Ulbricht ran Silk Road as Dread Pirate Roberts. An IRS agent found him with one Google search and an old forum post.\n\nAI narration. Sources:\nhttps://en.wikipedia.org/wiki/Ross_Ulbricht\nhttps://en.wikipedia.org/wiki/Silk_Road_(marketplace)\n\nSubscribe to @thelastmistakefiles. Every case has a last mistake.\n\n#truecrime #casefiles #thelastmistake"
- }
+  "youtube_description": "Ross Ulbricht ran Silk Road, the dark web's biggest drug market, as Dread Pirate Roberts. An IRS agent found him by searching for the oldest mention of the site and following one old forum post that held his real email address.\n\nSources:\n• Wikipedia, \"Ross Ulbricht\" (fetched Nov 13, 2026)\n• Wikipedia, \"Silk Road (marketplace)\" (fetched Nov 13, 2026)\n• Bitcointalk, altoid's job post (fetched Nov 13, 2026)\n\nThe Last Mistake: every case has a last mistake. Instagram: @thelastmistakefiles\n\n#TrueCrime #CaseFiles #Shorts"
+ },
+ "math": [
+  {
+   "expr": "1.2e9",
+   "expect": "1.2e9",
+   "note": "Silk Road sales, roughly $1.2 billion per the FBI complaint (said as 'billion dollar')"
+  },
+  {
+   "expr": "2013 - 2011",
+   "expect": "2",
+   "note": "email post in 2011, arrest in 2013: 'two years earlier'"
+  },
+  {
+   "expr": "2025",
+   "expect": "2025",
+   "note": "pardon, 21 Jan 2025 (Wikipedia)"
+  }
+ ]
 }

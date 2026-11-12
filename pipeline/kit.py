@@ -11,7 +11,7 @@ Brief:
      "show": {"kind": "suspect", ...}},                        # optional: starts a new scene at this beat
     ...
   ],
-  "cover": {...}, "sources": [...], "post": {...}               # copied as-is
+  "cover": {...}, "sources": [...], "math": [...], "post": {...}   # copied as-is (see ROUTINE.md)
 }
 Beat 0 must have a "show" (the hook frame); everything in it is on screen at frame 0.
 "@n" below = beat n of THIS scene (0 = the beat with the show). Stamps: {"text", "sub", "color": "red"|"ink",
@@ -260,7 +260,7 @@ def build_spec(brief):
             "speed": brief.get("speed", 0.95), "header": {"left": f"CASE FILE {case}", "right": "THE LAST MISTAKE"},
             "phrases": phrases, "scenes": scenes}
     if style == "board": spec["world"] = [BW, B.bh]
-    for k in ("cover", "sources", "post"): spec[k] = brief[k]
+    for k in ("cover", "sources", "post", "math"): spec[k] = brief.get(k, [])
     return spec
 
 

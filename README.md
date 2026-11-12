@@ -13,4 +13,9 @@ briefs/<id>.json  --pipeline/kit.py-->  specs/<id>.json  --pipeline/make_reel.py
 - `pipeline/fx.py`: the drawing blocks (cork, halftone, stamps, cards, string)
 - `assets/fonts`: Anton, Special Elite, Courier Prime, Caveat (OFL) and Permanent Marker (Apache 2.0), from Google Fonts
 
-How to make a Reel: see `ROUTINE.md`.
+- `poster/`: posting (GitHub Actions): `publish_due.py` posts queued Reels at `post_at` to YouTube and Instagram;
+  videos are served from the `media` branch by GitHub Pages
+- `tools/`: `check_keys.py`, `deep_check.py` (no public posts), `get_youtube_token.py`, `backfill_thumbnails.py`
+- `pages/`: the public site (home, privacy, terms) shown on GitHub Pages
+
+How to make a Reel: `ROUTINE.md`. One-time setup: `SETUP.md`.

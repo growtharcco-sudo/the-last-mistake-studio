@@ -1,4 +1,4 @@
-name: Check briefs
+name: Check briefs (layout)
 on:
   push:
     paths: ["briefs/**", "pipeline/**"]

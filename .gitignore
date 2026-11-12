@@ -1,4 +1,10 @@
-queue/*
-!queue/.gitkeep
+# videos and covers live only on the `media` branch, never in main's history
+queue/*/video.mp4
+queue/*/cover.png
+queue/*/cover_yt.jpg
+queue/*/*.wav
+queue/*/check*
+queue/*/sheet.png
+.changed
 __pycache__/
 *.pyc
