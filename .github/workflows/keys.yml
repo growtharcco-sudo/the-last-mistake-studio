@@ -20,8 +20,8 @@ jobs:
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: |
-          set -o pipefail
-          python tools/check_keys.py 2>&1 | tee out.txt; rc=$?
+          rc=0; python tools/check_keys.py > out.txt 2>&1 || rc=$?
+          cat out.txt
           # names and IDs only (never key values): also shown as notes on the run page
           while IFS= read -r l; do [ -n "$l" ] && echo "::notice::$l"; done < out.txt
           exit $rc
